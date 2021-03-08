@@ -5,4 +5,5 @@ EXPOSE 80
 COPY ./test_godzilla /var/www/html
 COPY ./flag.sh /flag.sh
 
-RUN rm -rf /flag.sh
+RUN /flag.sh \
+    rm -rf /flag.sh
