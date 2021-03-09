@@ -9,7 +9,7 @@ mysqli_select_db($con, "supersqli");
 
 $id = isset($_GET['id']) ? $_GET['id'] : 1;
 
-$result = mysqli_query("SELECT * FROM words where id=".$id);
+$result = mysqli_query($con,"SELECT * FROM words where id=".$id);
 
 while($row = mysqli_fetch_array($result))
   {
