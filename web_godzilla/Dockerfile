@@ -5,6 +5,4 @@ EXPOSE 80
 COPY ./test_godzilla /var/www/html
 COPY ./flag.sh /flag.sh
 
-RUN chmod +x /flag.sh && \
-    /flag.sh && \
-    rm -rf /flag.sh 
+RUN chmod +x /flag.sh
