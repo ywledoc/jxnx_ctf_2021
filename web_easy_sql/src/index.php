@@ -1,16 +1,15 @@
 <?php
-$con = mysqli_connect("127.0.0.1","root","root");
+$con = mysqli_connect("", "root", "root", "supersqli", 0, "/run/mysqld/mysqld.sock");
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
   }
 
-mysqli_select_db("supersqli", $con);
+mysqli_select_db($con, "supersqli");
 
-if(isset($_GET)){
-	$_GET['id'] = 1;
-}
-$result = mysqli_query("SELECT * FROM words where id=".$_GET['id']);
+$id = isset($_GET['id']) ? $_GET['id'] : 1;
+
+$result = mysqli_query("SELECT * FROM words where id=".$id);
 
 while($row = mysqli_fetch_array($result))
   {
