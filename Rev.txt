@@ -1,0 +1,3 @@
+(flag{flag_is_here})find_string:链接: https://pan.baidu.com/s/1wj6e0aS4jEfsMC0lNFno8w 提取码: 7qn9 复制这段内容后打开百度网盘手机App，操作更方便哦
+
+(flag{62262266866222})maze:链接: https://pan.baidu.com/s/1Bi9PUGg64QLAVjAmlxYsuA 提取码: fyn4 复制这段内容后打开百度网盘手机App，操作更方便哦
