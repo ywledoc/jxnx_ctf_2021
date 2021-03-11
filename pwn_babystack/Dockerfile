@@ -1,2 +1,2 @@
 FROM glzjin/pwn_base_18
-COPY ycb_2020_easy_heap /pwn/pwn
+COPY babyheap_0ctf_2017 /pwn/pwn
